@@ -3,33 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/Random_Quote_Generator.css" />
     <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="style/Random_Quote_Generator.css" />
   </head>
   <body>
-    <div class="app">
-      <header>Random Quote Generator</header>
-      <section class="quotes">
-        <div class="quote-text" id="js-quote-text"></div>
-      </section>
-      <div id="js-spinner" class="spinner hidden">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-      </div>
-      <section class="controls">
-        <button type="button" id="js-new-quote" class="new-quote button">
-          Get quote
-        </button>
-        <script src="./script/random_quote_generator.js"></script>
-        <!--
-        Placing this script code in head will give you the newQuoteButton is null error message
-        because the button does not exist when the javascript file is loaded.
-        -->
-        <script src="./script/test.js"></script>
-      </section>
+    <div class="container">
+      <h1>Random Quote Generator</h1>
+      <blockquote id="quote-text">
+        Click the button to get a random quote!
+      </blockquote>
+      <button id="quote-button">
+        Generate a new quote
+      </button>
     </div>
+
+    <script src="script/random_quote_generator.js"></script>
+    <script src="script/test.js"></script>
   </body>
 </html>

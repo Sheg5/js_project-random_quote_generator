@@ -1,18 +1,16 @@
-const quoteTextElement = document.querySelector('#js-quote-text');
-
-const buttonElement = document.querySelector('#js-new-quote');
+const quoteTextElement = document.getElementById('quote-text');
 
 // Function to simulate a button click event
 function simulateButtonClick() {
     const previousQuote = quoteTextElement.textContent.trim();
 
-    buttonElement.click();
+    document.getElementById('quote-button').click();
 
     console.log('Button clicked!');
 
-    let currentQuote = '';
     setTimeout(() => {
-        currentQuote = quoteTextElement.textContent.trim()
+        const currentQuote = quoteTextElement.textContent.trim()
+
         if (currentQuote !== previousQuote) {
             console.log('Quote changed after button click.');
             console.log('Previous quote:', previousQuote);
@@ -34,5 +32,5 @@ function testQuoteDisplay() {
     }
 }
 
-setTimeout(testQuoteDisplay, 3000); // Adjust the delay if needed (wait for the quote to load)
-setTimeout(simulateButtonClick, 3000); // Adjust the delay if needed (wait for the quote to load)
+setTimeout(testQuoteDisplay, 6000); // Adjust the delay if needed (wait for the quote to load)
+setTimeout(simulateButtonClick, 9000); // Adjust the delay if needed (wait for the quote to load)
